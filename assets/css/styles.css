@@ -1,5 +1,4 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -254,7 +253,7 @@ img {
   line-height: 120%;
   margin: 0 auto 2rem;
   position: relative;
-  width: max-content;
+  width: auto;
 } 
 
 .home__title img {
@@ -538,7 +537,7 @@ img {
   inset: 0;
   background: radial-gradient(
     circle at the top right,
-    rgba(255, 255, 255, 0,05),
+    rgba(255, 255, 255, 0.05),
     transparent 60%
   );
   pointer-events: none;
@@ -690,7 +689,7 @@ flex-direction: row-reverse;
 
 /*==cards==*/
 .trade-card {
-  background: rgba(255,255 255,0.05);
+  background: rgba(255,255, 255,0.05);
   padding: 30px;
   border-radius: 15px;
   backdrop-filter: blur(10px);
@@ -1722,7 +1721,9 @@ html {
   align-items: center;
   font-size: 0.78rem;
   color: rgba(255,255,255,0.2);
-  margin: 0 calc((100% - 1200px) / 2);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
 }
 
 /* ===================== RESPONSIVE ===================== */
@@ -1734,6 +1735,18 @@ html {
   }
 
   .home__description,
+
+  .home__description {
+  max-width: 100%;
+}
+
+.home__image {
+  order: -1;
+}
+.home__image img {
+  max-width: 320px;
+}
+
   .home__label {
     margin-left: auto;
     margin-right: auto;
@@ -1771,7 +1784,43 @@ html {
     display: block;
   }
 
-  .footer__container {
-    grid-template-columns: 1fr;
-  }
+.footer__container {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.footer__tagline {
+  max-width: 100%;
+}
+
+.home__buttons {
+  flex-direction: column;
+  align-items: center;
+}
+.home__btn-primary,
+.home__btn-secondary {
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+} 
+
+.nav__menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(10, 8, 5, 0.97);
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1.2rem;
+    z-index: 99;
+}
+
+.nav__menu.open {
+    display: flex;
+}
+
+.nav__menu .nav__list {
+    flex-direction: column;
+    gap: 1.2rem;
 }

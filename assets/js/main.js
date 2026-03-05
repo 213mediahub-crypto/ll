@@ -2,7 +2,7 @@
 const scrollHeader = () => {
     const header = document.getElementById('header')
 
-    this.scrollY >= 50 ? header.classList.add('scroll-header')
+    window.scrollY >= 50 ? header.classList.add('scroll-header')
                         : header.classList.remove('scroll-header')                    
 }
 
@@ -13,7 +13,7 @@ window.addEventListener('scroll', scrollHeader)
 const scrollUp = ()  =>{
     const scrollUp = document.getElementById('scroll-up')
 
-    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+    window.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
                     : scrollUp.classList.remove('show-scroll')
 }
 
@@ -62,6 +62,30 @@ const accordions = document.querySelectorAll(".accordion");
 accordions.forEach(button => {
     button.addEventListener("click", () => {
         const panel = button.nextElementSibling;
-        panel.computedStyleMap.display = panel.computedStyleMap.display === "block" ? "none" : "block";
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
     });
 });
+
+/*=============== MOBILE NAV TOGGLE ===============*/
+const navToggle = document.getElementById('nav-toggle')
+const navMenu = document.getElementById('nav-menu')
+
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open')
+        // swap icon between menu and close
+        const icon = navToggle.querySelector('i')
+        icon.classList.toggle('ri-menu-line')
+        icon.classList.toggle('ri-close-line')
+    })
+
+    // Close menu when any nav link is clicked
+    document.querySelectorAll('.nav__link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open')
+            const icon = navToggle.querySelector('i')
+            icon.classList.add('ri-menu-line')
+            icon.classList.remove('ri-close-line')
+        })
+    })
+}
