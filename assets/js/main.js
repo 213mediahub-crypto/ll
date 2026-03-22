@@ -1,91 +1,83 @@
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-const scrollHeader = () => {
-    const header = document.getElementById('header')
+const header = document.getElementById('header');
 
-    window.scrollY >= 50 ? header.classList.add('scroll-header')
-                        : header.classList.remove('scroll-header')                    
+window.addEventListener('scroll', () => {
+  window.scrollY >= 50
+    ? header.classList.add('scroll-header')
+    : header.classList.remove('scroll-header');
+});
+
+/*=============== SHOW SCROLL UP ===============*/
+const scrollUpBtn = document.getElementById('scroll-up');
+
+window.addEventListener('scroll', () => {
+  window.scrollY >= 350
+    ? scrollUpBtn.classList.add('show-scroll')
+    : scrollUpBtn.classList.remove('show-scroll');
+});
+
+/*=============== NAV TOGGLE =================*/
+const toggle = document.getElementById('nav-toggle');
+const menu = document.getElementById('nav-menu');
+const navLinks = document.querySelectorAll('.nav__link');
+
+/* Open / Close menu */
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
+
+/* Auto close menu on click */
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('open');
+  });
+});
+
+/*=============== ACTIVE LINK ON SCROLL ===============*/
+const sections = document.querySelectorAll('section[id]');
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach(section => {
+    const sectionHeight = section.offsetHeight;
+    const sectionTop = section.offsetTop - 120;
+    const sectionId = section.getAttribute('id');
+
+    const link = document.querySelector('.nav__link[href*=' + sectionId + ']');
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      link?.classList.add('active-link');
+    } else {
+      link?.classList.remove('active-link');
+    }
+  });
 }
 
-window.addEventListener('scroll', scrollHeader)
+window.addEventListener('scroll', scrollActive);
 
-
-/*=============== SHOW SCROLL UP ===============*/ 
-const scrollUp = ()  =>{
-    const scrollUp = document.getElementById('scroll-up')
-
-    window.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-                    : scrollUp.classList.remove('show-scroll')
-}
-
-window.addEventListener('scroll', scrollUp)
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const section = document.querySelectorAll('section[id]')
-
-const scrollActive = () =>{
-    const scrollY = window.pageYOffset
-
-    section.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-            sectionTop = current.offsetTop - 58,
-            sectionId = current.getAttribute('id'),
-            sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            sectionClass.classList.add('active-link')
-        }else{
-            sectionClass.classList.remove('active-link')
-        }
-    })
-}
-
-window.addEventListener('scroll', scrollActive)
-
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+/*=============== SCROLL REVEAL ===============*/
 const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
-    reset: true  // Anomation repeat
-})
+  origin: 'top',
+  distance: '60px',
+  duration: 2000,
+  delay: 300,
+  reset: false
+});
 
-sr.reveal(`.home__data, .products__data, .steps__content,
-            .footer__container`)
-sr.reveal(`.home__img`, {origin: 'bottom'})
-sr.reveal(`.products__card`, {interval: 100})
-sr.reveal(`.about__img, .testimonial__img`, {origin: 'right'})
-sr.reveal(`.about__data, .testimonial__data`, {origin: 'left'})
+sr.reveal('.home__content, .products__data, .steps__content, .footer__container');
+sr.reveal('.home__image', { origin: 'bottom' });
+sr.reveal('.products__card', { interval: 100 });
+sr.reveal('.about__img, .testimonial__img', { origin: 'right' });
+sr.reveal('.about__data, .testimonial__data', { origin: 'left' });
 
+/*=============== ACCORDION ===============*/
 const accordions = document.querySelectorAll(".accordion");
 
 accordions.forEach(button => {
-    button.addEventListener("click", () => {
-        const panel = button.nextElementSibling;
-        panel.style.display = panel.style.display === "block" ? "none" : "block";
-    });
+  button.addEventListener("click", () => {
+    const panel = button.nextElementSibling;
+    panel.style.display =
+      panel.style.display === "block" ? "none" : "block";
+  });
 });
-
-/*=============== MOBILE NAV TOGGLE ===============*/
-const navToggle = document.getElementById('nav-toggle')
-const navMenu = document.getElementById('nav-menu')
-
-if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('open')
-        // swap icon between menu and close
-        const icon = navToggle.querySelector('i')
-        icon.classList.toggle('ri-menu-line')
-        icon.classList.toggle('ri-close-line')
-    })
-
-    // Close menu when any nav link is clicked
-    document.querySelectorAll('.nav__link').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('open')
-            const icon = navToggle.querySelector('i')
-            icon.classList.add('ri-menu-line')
-            icon.classList.remove('ri-close-line')
-        })
-    })
-}

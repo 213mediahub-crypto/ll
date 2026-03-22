@@ -10,6 +10,7 @@
           <meta name="keywords" content="Loro Coffee, Ugandan coffee, organic Robusta coffee, single-origin coffee, coffee export Uganda, Loro Coffee Farms, premium coffee Uganda" />
           <meta name="author" content="Loro Coffee Farms" />
           <meta name="robots" content="index, follow" />
+          <meta name="theme-color" content="#c8a96e" />
           <link rel="canonical" href="https://213mediahub-crypto.github.io/loll/" />
 
          <!-- ✅ OPEN GRAPH (Controls how your site looks when shared on Facebook, WhatsApp, etc.) -->
@@ -38,7 +39,7 @@
         <script type="application/ld+json">
          {
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": "FoodEstablishment",
           "name": "Loro Coffee",
           "alternateName": "Loro Coffee Farms",
           "url": "https://213mediahub-crypto.github.io/loll/",
@@ -104,8 +105,6 @@
 
         <!-- Keep your existing CSS links below this line -->
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -119,42 +118,38 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        <title>Loro Coffee</title>
+       
     </head>
     <body>
         <!--==================== HEADER ====================- -->
        
         <header class="header" id="header">
-            <nav class="nav container">
-             <a href="#" class="nav__logo">
-               <img src="assets/img/headpic.png" alt="logo">
-               <span>LORO COFFEE</span>
-             </a>
-             <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                <li class="nav__item">
-                 <a href="#home" class="nav__link active-link">Home</a>
-                </li>
-                <li class="nav__item">
-                 <a href="#about" class="nav__link">About</a>
-                </li>
-                <li class="nav__item">
-                 <a href="#steps" class="nav__link">Process</a>
-                </li>
-                <li class="nav__item">
-                 <a href="#testimonial" class="nav__link">Testimonials</a>
-                </li>
-                </ul>
-                <!--</div>
-                 <a href="mailto:lorocoffeefarms@gmail.com" class="nav__cta">Order Now</a>
-                 <div class="nav__toggle" id="nav-toggle">
-                  <i class="ri-menu-line"></i>
-                </div>--> 
-            </nav>
-            <script src="https://unpkg.com/scrollreveal"></script>
-            <script src="assets/js/main.js"></script>
-        </header> 
+  <nav class="nav container">
+    <a href="#" class="nav__logo">
+      <img src="assets/img/headpic.png" alt="logo">
+      <span>LORO COFFEE</span>
+    </a>
+
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#steps" class="nav__link">Process</a></li>
+        <li class="nav__item"><a href="#testimonial" class="nav__link">Testimonials</a></li>
+            <li class="nav__item"><a href="#trade" class="nav__link">Partner With Us</a></li>
+        
+      </ul>
+    </div>
+    <div class="nav__overlay" id="nav-overlay"></div>
+
+    <!-- Hamburger / toggle button -->
+    <div class="nav__toggle" id="nav-toggle">
+      <i class="ri-menu-line"></i>
+    </div>
+  </nav>
+</header>
           
         
 
@@ -184,7 +179,7 @@
                         </p>
 
                         <a href="#" class="button">
-                            Discover Our Coffee <i class="ri-arrow-right-s-line"></i>
+                            Explore Our Coffee <i class="ri-arrow-right-s-line"></i>
                         </a>
                     </div>
 
@@ -243,14 +238,14 @@
                             </article>
     
                             <article class="products__card">
-                                <img src="assets/img/newloro22.png" alt="products image" class="products__img">
+                                <img src="assets/img/newloro22.png" alt="products image" class="products__img" loading="lazy">
                                 <h3 class="products__name">Single-Origin Blends (coming soon)</h3>
                                  <p>Carefully crafted blends designed to showcase the distinctive flavors of Loro coffee</p>   
                                 <!--<span class="products__price">$20</span>-->
                             </article>
     
                             <article class="products__card">
-                                <img src="assets/img/newloro33.png" alt="products image" class="products__img">
+                                <img src="assets/img/newloro33.png" alt="products image" class="products__img" loading="lazy">
                                 <h3 class="products__name">Artisanal roasts (coming soon)</h3>
                                 <p>Specially roasted coffee crafted to bring out rich aroma, smooth texture and bold taste.</p>
                                 <!--<span class="products__price">$20</span>-->
@@ -282,23 +277,61 @@
                             <p>Our initiatives create jobs, improve infrastructure, and uplift rural communities.</p>
                         </div>
 
-                        <img src="assets/img/pp1.jpeg" alt="about image" class="about__img">
+                        <img src="assets/img/pp1.jpeg" alt="about image" class="about__img" loading="lazy">
                     </div>
                 </div>
             </section>
 
-            <!--Image gallery-->
-            <section class="gallery">
-                <h2>Inside Loro Coffee</h2>
-                <div class="gallery-grid">
-                    <img src="assets/img/gallery4.jpg" alt="  ">
-                    <img src="assets/img/gallery3.jpg" alt="  ">
-                    <img src="assets/img/gallery2.jpg" alt="  ">
-                    <img src="assets/img/gallery1.jpg" alt="  ">
-                    <img src="assets/img/coffeeharvest.JPG" alt="  "> 
+           <!-- Image gallery -->
+<section class="gallery">
+    <h2 class="gallery__title">Inside Loro Coffee</h2>
 
-                </div>
-            </section>
+    <div class="gallery-grid">
+
+        <div class="gallery-card">
+            <img src="assets/img/gallery4.jpg" alt="Coffee farm" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Highland Farms</h3>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="assets/img/gallery3.jpg" alt="Coffee beans" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Premium Beans</h3>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="assets/img/gallery2.jpg" alt="Harvesting coffee" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Hand Picking</h3>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="assets/img/gallery1.jpg" alt="Coffee drying" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Natural Drying</h3>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="assets/img/coffeeharvest.JPG" alt="Coffee harvest" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Harvest Season</h3>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="assets/img/manu4.WEBP" alt="Coffee processing" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>Processing</h3>
+            </div>
+        </div>
+
+    </div>
+</section>
 
             <!--==================== STEPS ====================-->
             <section class="steps" id="steps">
@@ -411,7 +444,7 @@
                         <span class="step-number">C</span>
                         <h2>Quality Control</h2>
                         <p>
-                            Each batch ungergoes professional cupping sessions to assess aroma,
+                            Each batch undergoes professional cupping sessions to assess aroma,
                             acidity, body, and aftertaste before approval.
                         </p>
                     </div>
@@ -427,7 +460,7 @@
                         <h2>Packaging</h2>
                         <p>
                             Freshness is sealed using one-way degassing valves and airtight
-                            packaging to preserve aroma and flavor intergrity.
+                            packaging to preserve aroma and flavor integrity.
                         </p>
                     </div>
                 </div>                 
@@ -488,7 +521,7 @@
         </main>
 
         <!--TRADE & EXPORT PAGE -->
-        <section class="trade-hero">
+        <section class="trade-hero" id="trade">
             <div class="trade-overlay">
                 <h1>Trade & Export Partnerships</h1> 
                  <p class="subtitle">
@@ -502,7 +535,7 @@
 
                 <!--global-->
                 <div class="trade-card">
-                     <h2>Gloabal Distribution</h2>
+                     <h2>Global Distribution</h2>
                      <p>
                         Loro Coffee supports international trade through professional export documentation,
                         efficient logistics coordination and consistent supply chain management.
@@ -563,33 +596,8 @@
 
                 <!--STEP 2: Find your footer's navigation or contact section and add:-->
 
-            <div class="footer-social">
-              <h4>Follow Us</h4>
-              <a href="https://www.instagram.com/lorocoffee" target="_blank" rel="noopener noreferrer" aria-label="Loro Coffee on Instagram">
-             <!-- Instagram Icon -->
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-             </svg>
-             Instagram
-             </a>
-             <a href="https://www.x.com/lorocoffee" target="_blank" rel="noopener noreferrer" aria-label="Loro Coffee on X (Twitter)">
-             <!-- X / Twitter Icon -->
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-             </svg>
-              X (Twitter)
-              </a>
-            </div>
-
-                <div class="footer__col">
-                    <h4 class="footer__heading">Navigate</h4>
-                    <ul class="footer__links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#steps">Our Process</a></li>
-                    <li><a href="#testimonial">Testimonials</a></li>
-                    </ul>
-                </div>
+           
+            
 
                 <div class="footer__col">
                     <h4 class="footer__heading">Contact</h4>
@@ -600,9 +608,16 @@
                     <li>📞 <a href="tel:+256703181093">+256 703 181 093</a></li>
                     </ul>
                 </div>
+
+                <div class="social-icons">
+                 <a href="https://facebook.com/lorocoffee"><i class="fa-brands fa-facebook"></i></a>
+                  
+                    <a href="https://instagram.com/lorocoffee"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://tiktok.com/@lorocoffee"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
             </div>
 
-
+           
             <div class="footer__bottom">
                 <p>© 2018–2026 Loro Coffee. All rights reserved.</p>
                 <p>Proudly grown in Uganda 🇺🇬</p>
@@ -620,4 +635,4 @@
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
     </body>
-</html>
+</html> 
