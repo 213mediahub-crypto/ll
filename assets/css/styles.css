@@ -1327,8 +1327,6 @@ body {
 /*visual story selection section fix */
 
 
-
-
 /*eah screen block*/
 
 
@@ -1387,7 +1385,7 @@ html {
 }
 
 .visual-block.roasting {
-  background-image: url('../img/roasting.JPG');
+  background-image: url('../img/sunny.jpg'); 
 }
 
 .visual-block.brewing {
@@ -1487,7 +1485,7 @@ html {
   transform: translateY(0);
 }
 .gallery-card:hover, .gallery-card:active{
-  scale(1.05);
+  scale (1.05);
   transform: translateY(-3px);
 }
 /* Large tablets / smaller laptops: 1024px and below */
