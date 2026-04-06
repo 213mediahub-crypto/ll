@@ -187,6 +187,7 @@ img {
   font-size: 1.6rem;
   color: #fff;
   cursor: pointer;
+
 }
 /* ================= MOBILE MENU WITH SMOOTH SLIDE ================= */
 @media (max-width: 768px) {
@@ -278,15 +279,7 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--first-color);
-  z-index: var(--z-fixed);
-  transition: background .4s, box-shadow .4s;
-}
+
 
 .header__border {
   width: 100%;
@@ -647,7 +640,7 @@ flex-direction: row-reverse;
 }
 
 .process__image img:hover {
-  transform: scale(1.05s);
+  transform: scale(1.05);
 }
 
 .process__content {
@@ -803,7 +796,7 @@ flex-direction: row-reverse;
 
 .trade-card:hover {
   transform: translateY(-8px);
-  background: rgba(255,255 255,0.1);
+  background: rgba(255,255, 255,0.1);
 }
 
 .trade-card.highlight {
@@ -1021,7 +1014,7 @@ flex-direction: row-reverse;
   padding: .6rem;
   border-radius: 50%;
   z-index: var(--z-tooltip);
-  transition: bottom .5s transform .3s;
+  transition: bottom .5s, transform .3s;
 }
 .social-icons a{
 margin:0 10px;
@@ -1080,7 +1073,7 @@ color:white;
 /* For medium devices */
 @media screen and (min-width: 576px) {
   
-
+}
 /* For large devices */
 @media screen and (min-width: 1023px) {
   .section {
@@ -1278,14 +1271,6 @@ color:white;
 }
 
 /* EDITS ON  NEW PAGES */
-body {
-  background-color: var(--first-color);
-  border-radius: var(--border-section);
-  font-family: 'Segoe UI',sans-serif;
-  margin: 0;
-  /*background: #f8f6f3;*/
-  color: #ffffff;
-}
 
 /* FIX THIS PAGE HEADER*/
 .page-header {
@@ -1315,7 +1300,8 @@ body {
   border-radius: var(--border-section);
   background: none;
   border: 1px solid #222;
-  padding: pointer;
+  padding: 15px;
+  cursor: pointer;
 }
 
 .panel {
@@ -1327,18 +1313,21 @@ body {
 /*visual story selection section fix */
 
 
+
+
 /*eah screen block*/
 
 
 .visual-block {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 html {
@@ -1351,8 +1340,8 @@ html {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.8)
   );
   z-index: 1;
 }
@@ -1385,7 +1374,7 @@ html {
 }
 
 .visual-block.roasting {
-  background-image: url('../img/sunny.jpg'); 
+  background-image: url('../img/sunny.jpg');
 }
 
 .visual-block.brewing {
@@ -1400,16 +1389,18 @@ html {
 @media(max-width: 768px) {
   .visual-block {
     background-attachment: scroll;
-    height: 80vh;
+    min-height: 70vh;
+    padding: 40px 20px;
   }
-}
+
 
 .visual-block h2 {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .visual-block p {
-  font-size: 15px;
+  font-size: 14px;
+}
 }
 /*=============== GALLERY ===============*/
 .gallery {
@@ -1430,44 +1421,40 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  overflow-x:auto;
-  scroll-snap-stop: x mandatory;
-  -webkit-overflow-scrolling: touch;
 }
 
 /* Card */
+
 .gallery-card {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  cursor: pointer;
 }
 
-/* Image */
 .gallery-card img {
   width: 100%;
-  height: 280px;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: transform 0.6s ease, filter 0.6s ease;
-  scroll-snap-align: center;
+  transition: transform 0.6s ease;
 }
 
-/* Overlay */
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
 .gallery-overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 1.2rem;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
   color: #fff;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.4s ease;
-  font-size: 0.95rem;
-  padding:0.8rem;
-  line-height: 1.2rem;
-}
+  opacity: 1;
+  transform: translateY(20px);
+  transition: all 0.3s ease, transform 0.3s ease;
 
+}
 /* Text */
 .gallery-overlay h3 {
   font-size: 1.1rem;
@@ -1485,8 +1472,8 @@ html {
   transform: translateY(0);
 }
 .gallery-card:hover, .gallery-card:active{
-  scale (1.05);
-  transform: translateY(-3px);
+
+  transform:  scale(1.05) translateY(-3px);
 }
 /* Large tablets / smaller laptops: 1024px and below */
 @media (max-width: 1024px) {
@@ -1495,7 +1482,7 @@ html {
         gap: 1rem;
     }
     .gallery-card img {
-        height: 220px;
+        height: auto;
     }
 }
 
@@ -1512,33 +1499,46 @@ html {
 
 /* Mobile phones: 480px and below */
 @media (max-width: 480px) {
-    .gallery-grid {
-        grid-template-columns: 1fr; /* single column */
-        gap: 0.6rem;
-        justify-content: center;
-    }
 
-    .gallery-card {
-        max-width: 320px; /* limit card width on small screens */
-        margin: 0 auto;   /* center horizontally */
-    }
+  .gallery {
+    padding: 3rem 1rem;
+    border-radius: 15px;
+  }
 
-    .gallery-card img {
-        height: 220px;    /* fixed box height for uniformity */
-        object-fit: cover;
-        border-radius: 16px;
-    }
+  .gallery-grid {
+    grid-template-columns: 1fr;  /* single column */
+    gap: 1rem;
+  margin: 0 auto;
+    max-width: 350px; /* prevent hitting screen edges */
+    padding: 0 10px;
+  }
 
-    .gallery-overlay {
-        font-size: 0.85rem;
-        padding: 0.6rem;
-        line-height: 1.2rem;
-    }
+  .gallery-card {
+    width: 100%; 
+    border-radius: 16px;
+    max-width: 350px; /* prevent hitting screen edges */
+  }
 
-    .gallery h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
+  .gallery-card img {
+    width: 100%; 
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    max-width: 350px; /* prevent hitting screen edges */
+  }
+
+  .gallery-overlay {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    position: absolute;
+    opacity: 1;
+    min-height: 2.5rem;
+     transform: translateY(5px);
+  }
+
+  .gallery h2 {
+    font-size: 1.5rem;
+  }
 }
 
   /* Ensure single images like home image and testimonial images look good */
@@ -1597,14 +1597,6 @@ html {
 /* my improvements ==*/ 
 
 /* ===================== NAVBAR FIXES ===================== */
-.header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  background: rgba(10, 8, 5, 0.92);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-}
 
 
 
@@ -1739,6 +1731,7 @@ html {
   background: #080604;
   padding: 5rem 0 0;
   border-top: 1px solid rgba(255,255,255,0.06);
+
 }
 
 .footer__container {
@@ -1918,3 +1911,4 @@ html {
   max-width: 280px;
   text-align: center;
 } 
+}
