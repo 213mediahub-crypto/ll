@@ -1,652 +1,887 @@
-<!DOCTYPE html> 
-    <html lang="en">
-    <head> 
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-          <!-- ✅ PRIMARY SEO: Title & Description (Most important for Google) -->
-          <title>Loro Coffee | Premium Organic Ugandan Robusta Coffee</title>
-          <meta name="description" content="Loro Coffee — Single-origin organic Robusta coffee from the highlands of Loro, Uganda. Farm-to-cup quality, export-ready. Order now or explore trade partnerships." />
-          <meta name="keywords" content="Loro Coffee, Ugandan coffee, organic Robusta coffee, single-origin coffee, coffee export Uganda, Loro Coffee Farms, premium coffee Uganda" />
-          <meta name="author" content="Loro Coffee Farms" />
-          <meta name="robots" content="index, follow" />
-          <meta name="theme-color" content="#c8a96e" />
-          <link rel="canonical" href="https://213mediahub-crypto.github.io/loll/" />
+  <!-- ============================================================
+       SEO: PRIMARY META TAGS
+       Edit: title, description, keywords to match your content
+       ============================================================ -->
+  <title>Loro Coffee | Premium Organic Ugandan Robusta Coffee</title>
+  <meta name="description" content="Loro Coffee — Single-origin organic Robusta coffee from the highlands of Loro, Uganda. Farm-to-cup quality, export-ready. Order now or explore trade partnerships." />
+  <meta name="keywords" content="Loro Coffee, Ugandan coffee, organic Robusta coffee, single-origin coffee, coffee export Uganda, Loro Coffee Farms, premium coffee Uganda" />
+  <meta name="author" content="Loro Coffee Farms" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#b5682a" />
+  <link rel="canonical" href="https://lorocoffee.org/" />
 
-         <!-- ✅ OPEN GRAPH (Controls how your site looks when shared on Facebook, WhatsApp, etc.) -->
-         <meta property="og:type" content="website" />
-         <meta property="og:url" content="https://213mediahub-crypto.github.io/loll/" />
-         <meta property="og:title" content="Loro Coffee | Premium Organic Ugandan Robusta Coffee" />
-         <meta property="og:description" content="Single-origin organic Robusta from the highlands of Loro, Uganda. Farmed with care, roasted with precision, delivered worldwide." />
-         <meta property="og:image" content="https://213mediahub-crypto.github.io/loll/assets/img/pp6.jpeg" />
-         <meta property="og:image:width" content="1200" />
-         <meta property="og:image:height" content="630" />
-         <meta property="og:site_name" content="Loro Coffee" />
-         <meta property="og:locale" content="en_US" />
+  <!-- ============================================================
+       SEO: OPEN GRAPH (Facebook, WhatsApp, LinkedIn previews)
+       Edit: og:url, og:image with your actual domain
+       ============================================================ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lorocoffee.org/" />
+  <meta property="og:title" content="Loro Coffee | Premium Organic Ugandan Robusta Coffee" />
+  <meta property="og:description" content="Single-origin organic Robusta from the highlands of Loro, Uganda. Farmed with care, roasted with precision, delivered worldwide." />
+  <meta property="og:image" content="https://lorocoffee.org/assets/img/pp6.jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Loro Coffee" />
+  <meta property="og:locale" content="en_US" />
 
-         <!-- ✅ TWITTER / X CARD (Controls how your site looks when shared on X/Twitter) -->
-         <meta name="twitter:card" content="summary_large_image" />
-         <meta name="twitter:site" content="@LoroCoffee" /> <!-- UPDATE: Replace with your real X handle e.g. @LoroCoffeeUG -->
-         <meta name="twitter:creator" content="@LoroCoffee" /> <!-- UPDATE: Same as above -->
-         <meta name="twitter:title" content="Loro Coffee | Premium Organic Ugandan Robusta Coffee" />
-         <meta name="twitter:description" content="Single-origin organic Robusta from the highlands of Loro, Uganda. Farmed with care, roasted with precision, delivered worldwide." />
-         <meta name="twitter:image" content="https://213mediahub-crypto.github.io/loll/assets/img/pp6.jpeg" />
+  <!-- ============================================================
+       SEO: TWITTER / X CARD
+       Edit: twitter:site and twitter:creator with your real handle
+       ============================================================ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@LoroCoffee" />
+  <meta name="twitter:creator" content="@LoroCoffee" />
+  <meta name="twitter:title" content="Loro Coffee | Premium Organic Ugandan Robusta Coffee" />
+  <meta name="twitter:description" content="Single-origin organic Robusta from the highlands of Loro, Uganda. Farmed with care, roasted with precision, delivered worldwide." />
+  <meta name="twitter:image" content="https://lorocoffee.org/assets/img/pp6.jpeg" />
 
-        <!-- ✅ STRUCTURED DATA / SCHEMA MARKUP
-         This is what makes Google show your business info, social links,
-         reviews, and rich results directly in search results.
-         Paste this EXACTLY as-is inside <head> -->
-        <script type="application/ld+json">
-         {
-          "@context": "https://schema.org",
-          "@type": "FoodEstablishment",
-          "name": "Loro Coffee",
-          "alternateName": "Loro Coffee Farms",
-          "url": "https://213mediahub-crypto.github.io/loll/",
-          "logo": "https://213mediahub-crypto.github.io/loll/assets/img/headpic.png",
-          "image": "https://213mediahub-crypto.github.io/loll/assets/img/pp6.jpeg",
-          "description": "Loro Coffee is a premium single-origin organic Robusta coffee brand from Loro Town Council, Oyam District, Uganda. Established in 2018, we grow, process, and export high-quality Ugandan coffee worldwide.",
-          "foundingDate": "2018",
-          "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Loro Village, Wii Dam Apiny, Aber Sub County",
-          "addressLocality": "Loro Town Council",
-          "addressRegion": "Oyam District",
-          "addressCountry": "UG"
-         },
-         "contactPoint": [
-         {
-          "@type": "ContactPoint",
-          "telephone": "+256712465060",
-          "contactType": "customer service"
-         },
-         {
-          "@type": "ContactPoint",
-          "telephone": "+256703181093",
-          "contactType": "customer service"
-         },
-         {
-          "@type": "ContactPoint",
-          "email": "lorocoffeefarms@gmail.com",
-          "contactType": "customer service"
-         }
-         ],
-         "sameAs": [
-         "https://www.instagram.com/lorocoffee",
-         "https://www.x.com/lorocoffee"
-         ],
-          "priceRange": "$$",
-          "servesCuisine": "Coffee",
-         "hasOfferCatalog": {
-         "@type": "OfferCatalog",
-          "name": "Loro Coffee Products",
-         "itemListElement": [
-          {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Organic Robusta Coffee - Whole Bean",
-            "description": "Premium locally grown organic Robusta coffee, available in 250g, 500g, and 1kg",
-            "image": "https://213mediahub-crypto.github.io/loll/assets/img/newlorop1.png",
-            "brand": {
-              "@type": "Brand",
-              "name": "Loro Coffee"
-             }
-            }
-           }
-          ]
-         }
-        }
-         </script>
+  <!-- ============================================================
+       SEO: STRUCTURED DATA / SCHEMA MARKUP
+       Edit: url, telephone numbers, social sameAs links
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Loro Coffee",
+    "alternateName": "Loro Coffee Farms",
+    "url": "https://lorocoffee.org/",
+    "logo": "https://lorocoffee.org/assets/img/headpic.png",
+    "image": "https://lorocoffee.org/assets/img/pp6.jpeg",
+    "description": "Loro Coffee is a premium single-origin organic Robusta coffee brand from Loro Town Council, Oyam District, Uganda. Established in 2018.",
+    "foundingDate": "2018",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Loro Village, Wii Dam Apiny, Aber Sub County",
+      "addressLocality": "Loro Town Council",
+      "addressRegion": "Oyam District",
+      "addressCountry": "UG"
+    },
+    "contactPoint": [
+      { "@type": "ContactPoint", "telephone": "+256712465060", "contactType": "customer service" },
+      { "@type": "ContactPoint", "telephone": "+256703181093", "contactType": "customer service" },
+      { "@type": "ContactPoint", "email": "lorocoffeefarms@gmail.com", "contactType": "customer service" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/lorocoffee",
+      "https://www.facebook.com/lorocoffee",
+      "https://www.tiktok.com/@lorocoffee",
+      "https://www.x.com/lorocoffee"
+    ],
+    "priceRange": "$$",
+    "servesCuisine": "Coffee"
+  }
+  </script>
 
-          <!-- ✅ FAVICON (small icon that shows in browser tab - add your logo file) -->
-         <link rel="icon" type="image/png" href="assets/img/headpic.png" />
-          <link rel="apple-touch-icon" href="assets/img/headpic.png" />
+  <!-- ============================================================
+       FAVICONS
+       Replace headpic.png with a square logo for best results
+       ============================================================ -->
+  <link rel="icon" type="image/png" href="assets/img/headpic.png" />
+  <link rel="apple-touch-icon" href="assets/img/headpic.png" />
+  <link rel="shortcut icon" href="assets/img/headpic.png" type="image/x-icon" />
 
-        <!-- Keep your existing CSS links below this line -->
+  <!-- ============================================================
+       EXTERNAL FONTS & ICON LIBRARIES
+       Do not edit these unless changing fonts/icons
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ============================================================
+       SITE STYLESHEET
+       Main styles live in: assets/css/styles.css
+       ============================================================ -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
 
+<body>
 
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="assets/img/headpic.png" type="image/x-icon">
+  <!-- ============================================================
+       NAVIGATION
+       Edit: nav links, logo image path, CTA button text/href
+       ============================================================ -->
+  <header class="header" id="header">
+    <nav class="nav container">
 
-        <!--=============== REMIXICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <!-- Logo -->
+      <a href="#home" class="nav__logo">
+        <img src="assets/img/headpic.png" alt="Loro Coffee logo" onerror="this.style.display='none'" />
+        <span>LORO <em>Coffee</em></span>
+      </a>
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <!-- Desktop links -->
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="#home"        class="nav__link active-link">Home</a></li>
+        <li><a href="#about"       class="nav__link">About</a></li>
+        <li><a href="#products"    class="nav__link">Products</a></li>
+        <li><a href="#process"     class="nav__link">Process</a></li>
+        <li><a href="#testimonial" class="nav__link">Stories</a></li>
+        <li><a href="#trade"       class="nav__link">Trade</a></li>
+        <li><a href="#contact"     class="nav__link">Contact</a></li>
+      </ul>
 
-       
-    </head>
-    <body>
-        <!--==================== HEADER ====================- -->
-       
-        <header class="header" id="header">
-  <nav class="nav container">
-    <a href="#" class="nav__logo">
-      <img src="assets/img/headpic.png" alt="logo">
-      <span>LORO COFFEE</span>
-    </a>
+      <!-- CTA — shown after scroll -->
+      <a href="mailto:lorocoffeefarms@gmail.com" class="nav__cta" id="nav-cta">Partner With Us</a>
 
-    <div class="nav__menu" id="nav-menu">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-        <li class="nav__item"><a href="#steps" class="nav__link">Process</a></li>
-        <li class="nav__item"><a href="#testimonial" class="nav__link">Testimonials</a></li>
-            <li class="nav__item"><a href="#trade" class="nav__link">Partner With Us</a></li>
-        
+      <!-- Mobile hamburger -->
+      <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+        <i class="ri-menu-line"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav__drawer" id="nav-drawer">
+      <button class="nav__drawer-close" id="nav-close" aria-label="Close menu">
+        <i class="ri-close-line"></i>
+      </button>
+      <ul class="nav__drawer-list">
+        <li><a href="#home"        class="nav__drawer-link">Home</a></li>
+        <li><a href="#about"       class="nav__drawer-link">About</a></li>
+        <li><a href="#products"    class="nav__drawer-link">Products</a></li>
+        <li><a href="#process"     class="nav__drawer-link">Process</a></li>
+        <li><a href="#testimonial" class="nav__drawer-link">Stories</a></li>
+        <li><a href="#trade"       class="nav__drawer-link">Trade</a></li>
+        <li><a href="#contact"     class="nav__drawer-link">Contact</a></li>
       </ul>
     </div>
     <div class="nav__overlay" id="nav-overlay"></div>
+  </header>
+  <!-- END NAVIGATION -->
 
-    <!-- Hamburger / toggle button -->
-    <div class="nav__toggle" id="nav-toggle">
-      <i class="ri-menu-line"></i>
+
+  <!-- ============================================================
+       HERO SECTION
+       Edit: eyebrow text, h1, description, button links, badges
+       Background image controlled in CSS → .hero__bg
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+
+    <div class="hero__content container">
+      <span class="hero__eyebrow">— Grown in Uganda, Loved Worldwide</span>
+
+      <h1 class="hero__title">
+        Coffee Worth<br /><em>Waking Up For.</em>
+      </h1>
+
+      <p class="hero__description">
+        Single-origin Robusta from the highlands of Loro — farmed with care,
+        roasted with precision, delivered to the world.
+      </p>
+
+      <!-- Badges -->
+      <div class="hero__badges">
+        <span class="hero__badge">🌱 100% Organic</span>
+        <span class="hero__badge">🇺🇬 Uganda Origin</span>
+        <span class="hero__badge">✈️ Export Ready</span>
+      </div>
+
+      <!-- CTA buttons — edit href to point to the right section -->
+      <div class="hero__buttons">
+        <a href="#about"   class="btn btn--caramel">Discover Our Coffee</a>
+        <a href="#process" class="btn btn--outline-light">Our Process →</a>
+      </div>
     </div>
-  </nav>
-</header>
-          
-        
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <i class="ri-arrow-down-line"></i>
+      <span>Scroll</span>
+    </div>
+  </section>
+  <!-- END HERO -->
 
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <!--<section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__data">
-                        <h3 class="home__subtitle">
-                            EXCEPTIONAL QUALITY
-                        </h3>
+  <!-- ============================================================
+       STATS BAR
+       Edit: stat-number and stat-label text inside each .stat__item
+       ============================================================ -->
+  <div class="stats-bar">
+    <div class="stats__grid container">
 
-                        <h1 class="home__title">
-                            It's time for  <br>
-                            Loro Coffee 
+      <div class="stat__item">
+        <span class="stat__number">2018</span>
+        <span class="stat__label">Year Established</span>
+      </div>
 
-                        </h1>
+      <div class="stat__item">
+        <span class="stat__number">100%</span>
+        <span class="stat__label">Organic Certified</span>
+      </div>
 
-                        <img src="assets/img/home-coffee-title.png" alt="home image">
+      <div class="stat__item">
+        <span class="stat__number">2</span>
+        <span class="stat__label">Farm Locations</span>
+      </div>
 
-                        <p class="home__description">
-                            Each select coffee bean reflects our commitment 
-                            to coffee growers, who bring the best 
-                            select coffee to your table.
-                        </p>
-
-                        <a href="#" class="button">
-                            Explore Our Coffee <i class="ri-arrow-right-s-line"></i>
-                        </a>
-                    </div>
-
-                    <img src="assets/img/pp6.jpeg" alt="home image" class="home__img">
-                </div>
-            </section>-->
-            <section class="home" id="home">
-                <div class="home__container container">
-                    <div class="home__content">
-                        <p class="home__label">— Grown in Uganda, Loved Worldwide</p>
-                        <h1 class="home__title">
-                          Coffee Worth<br><em>Waking Up For.</em>
-                        </h1>
-                        <p class="home__description">
-                          Single-origin Robusta from the highlands of Loro — farmed with care,
-                          roasted with precision, delivered to the world.
-                        </p>
-                        <div class="home__buttons">
-                          <a href="#about" class="home__btn-primary">Discover Our Coffee</a>
-                          <a href="#steps" class="home__btn-secondary">Our Process →</a>
-                       </div>
-                       <div class="home__badges">
-                         <div class="home__badge">🌱 100% Organic</div>
-                         <div class="home__badge">🇺🇬 Uganda Origin</div>
-                         <div class="home__badge">✈️ Export Ready</div>
-                       </div>
-                       </div>
-                    <div class="home__image">
-                         <img src="assets/img/pp6.jpeg" alt="Loro Coffee" fetchpriority="high">
-                    </div>
-                </div>
-            </section>
-            
-
-            <!--==================== PRODUCTS ====================-->
-            <section class="products">
-                <div class="products__bg section">
-                    <div class="products__container container grid">
-                        <div class="products__data">
-                            <a href="#about" class="products__button">
-                                Scroll Down <i class="ri-arrow-down-s-line"></i>
-                            </a>
-    
-                            <p class="products__description">
-                                We strive to provide the best quality of coffee for all sorts of 
-                                demand that is on local and International markets.
-                            </p>
-                        </div>
-
-                        <div class="products__content">
-                            <article class="products__card">
-                                <img src="assets/img/newlorop1.png" alt="products image" class="products__img" ... loading="lazy">
-                                <h3 class="products__name">Organic Robusta Coffee</h3>
-                                <p>Premium locally grown organic Robusta coffee cultivated using sustainable farming techniques</p>
-                                <!--<span class="products__price">$10</span>-->
-                            </article>
-    
-                            <article class="products__card">
-                                <img src="assets/img/newloro22.png" alt="products image" class="products__img" loading="lazy">
-                                <h3 class="products__name">Single-Origin Blends (coming soon)</h3>
-                                 <p>Carefully crafted blends designed to showcase the distinctive flavors of Loro coffee</p>   
-                                <!--<span class="products__price">$20</span>-->
-                            </article>
-    
-                            <article class="products__card">
-                                <img src="assets/img/newloro33.png" alt="products image" class="products__img" loading="lazy">
-                                <h3 class="products__name">Artisanal roasts (coming soon)</h3>
-                                <p>Specially roasted coffee crafted to bring out rich aroma, smooth texture and bold taste.</p>
-                                <!--<span class="products__price">$20</span>-->
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== ABOUT ====================-->
-            <section class="about" id="about">
-                <div class="about__bg section">
-                    <div class="about__container container grid">
-                        <div class="about__data">
-                            <h2 class="section__title">
-                                About Loro Coffee 
-                            </h2>
-                            <p>Loro Coffee is a product of Loro Coffee Farms, specializing in growing Robusta organic coffee. Located in Loro Town Council, with farms in Loro Village and Wii Dam Apiny, Aber Sub County, established in 2018.</p>
-                            <p>Our farms are established sustainably, protecting natural vegetation and environment around our farms.</p>
-                            <h2>Our Mission</h2>
-                            <p>To produce exceptional organic coffee while fostering economic development and social progress in rural communities.</p>
-                            <h2>Our Vision</h2>
-                            <p>To transform Loro into a renowned coffee hub, ensuring community benefits and regional growth.</p>                           
-                            <h3>Environmental Stewardship</h3>
-                            <p>We implement sustainable farming techniques and protect natural vegetation around our farms.</p>
-                            <h3>Community Empowerment</h3>
-                            <p>We support local farmers with training and resources, promoting ethical farming practices.</p>      
-                            <h3>Economic Development</h3>
-                            <p>Our initiatives create jobs, improve infrastructure, and uplift rural communities.</p>
-                        </div>
-
-                        <img src="assets/img/pp1.jpeg" alt="about image" class="about__img" loading="lazy">
-                    </div>
-                </div>
-            </section>
-
-           <!-- Image gallery -->
-<section class="gallery">
-    <h2 class="gallery__title">Inside Loro Coffee</h2>
-
-    <div class="gallery-grid">
-
-        <div class="gallery-card">
-            <img src="assets/img/gallery4.jpg" alt="Coffee farm" loading="lazy">
-            <div class="gallery-overlay">
-                <h3>Highland Farms</h3>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <img src="assets/img/farm1.jpg" alt="plantation" loading="lazy">
-            <div class="gallery-overlay">
-                <h3>Our farms</h3>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <img src="assets/img/gallery3.jpg" alt="Coffee beans" loading="lazy">
-            <div class="gallery-overlay">
-                <h3>Premium Beans</h3>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <img src="assets/img/gallery2.jpg" alt="Harvesting coffee" loading="lazy">
-            <div class="gallery-overlay">
-                <h3>Hand Picking</h3>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <img src="assets/img/gallery1.jpg" alt="Coffee drying" loading="lazy">
-            <div class="gallery-overlay">
-                <h3>Natural Drying</h3>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <img src="assets/img/coffeeharvest.JPG" alt="Coffee harvest" loading="lazy">
-            <div class="gallery-overlay">
-                <h3>Harvest Season</h3>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <img src="assets/img/manu4.WEBP" alt="Coffee processing" loading="lazy">
-            <div class="gallery-overlay">
-                <h3>Processing</h3>
-            </div>
-        </div>
-
-        <!--<div class="gallery-card">
-            <img src="assets/img/farm2.jpg" alt="plantation" loading="lazy">
-            <div class="gallery-overlay">
-                <h3>Farm</h3>
-            </div>
-        </div>--> 
+      <div class="stat__item">
+        <span class="stat__number">4+</span>
+        <span class="stat__label">Product Formats</span>
+      </div>
 
     </div>
-</section>
+  </div>
+  <!-- END STATS BAR -->
 
-            <!--==================== STEPS ====================-->
-            <section class="steps" id="steps">
-                <div class="steps__bg section">
-                    <h2 class="section__title">
-                        Steps of manufacturing our products
-                    </h2>
 
-                    <div class="steps__container container grid">
-                        <img src="assets/img/coffee-beans-bg.png" alt="steps image" class="steps__bg-img">
+  <main class="main">
 
-                        <div class="steps__content">
-                            <img src="assets/img/steps-curve-line.svg" alt="steps image" class="steps__border">
+    <!-- ============================================================
+         ABOUT SECTION
+         Edit: heading, paragraphs, mission, vision, pillars
+         Left image: assets/img/pp1.jpeg
+         Accent image: assets/img/coffeeharvest.JPG
+         ============================================================ -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about__grid">
 
-                            <div class="steps__card">
-                                <div class="steps__circle">
-                                    <div class="steps__subcircle">
-                                        01
-                                    </div>
+          <!-- Left: image collage -->
+          <div class="about__images reveal">
+            <img src="assets/img/pp1.jpeg"
+                 alt="Loro Coffee farm"
+                 class="about__img-main" loading="lazy" />
+            <img src="assets/img/coffeeharvest.JPG"
+                 alt="Coffee harvest"
+                 class="about__img-accent" loading="lazy"
+                 onerror="this.style.display='none'" />
+            <div class="about__badge">
+              <strong>7yrs</strong>
+              <span>Of sustainable<br />farming</span>
+            </div>
+          </div>
 
-                                    <img src="assets/img/steps-green-coffee.png" alt="steps image" class="steps__img">
-                               </div>
+          <!-- Right: text content -->
+          <div class="about__text reveal reveal--delay">
+            <span class="section__label">About Loro Coffee</span>
+            <h2 class="section__title">
+              Premium Robusta from<br /><em>the heart of Uganda</em>
+            </h2>
+            <p class="section__body">
+              Loro Coffee is a product of Loro Coffee Farms, specialising in growing
+              organic Robusta coffee. Located in Loro Town Council, with farms in
+              <strong>Loro Village</strong> and <strong>Wii Dam Apiny</strong>,
+              Aber Sub County — established in 2018 and grown sustainably,
+              protecting the natural environment around every farm.
+            </p>
 
-                               <p class="steps__description">
-                                    Harvest occurs annually when the coffee 
-                                    beans reach maturity and are collected 
-                                    for processing.
-                               </p>
-                            </div>
-
-                            <div class="steps__card steps__card-move">
-                                <div class="steps__circle">
-                                    <div class="steps__subcircle">
-                                        02
-                                    </div>
-
-                                    <img src="assets/img/steps-coffee-beans.png" alt="steps image" class="steps__img">
-                               </div>
-
-                               <p class="steps__description">
-                                    The beans are dried using a wet or dry 
-                                    technique, depending on the taste we want 
-                                    to obtain.
-                               </p>
-                            </div>
-
-                            <div class="steps__card">
-                                <div class="steps__circle">
-                                    <div class="steps__subcircle">
-                                        03
-                                    </div>
-
-                                    <img src="assets/img/steps-ground-coffee.png" alt="steps image" class="steps__img">
-                               </div>
-
-                               <p class="steps__description">
-                                    The coffee is roasted and acquires 
-                                    its flavor by processing the grain 
-                                    in ovens.                                
-                               </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--MANUFACTURING PROCESS-------->
-            <section class="process">
-                <div class="process__header">
-                    <h1 class="section__title">Our Manufacturing Process</h1>
-                     <p class="page-header">From carefully selected farms to your cup - precision at every stage.</p>
-                </div>     
-           
-            <!--STEP 1-->
-                <div class="process__step">
-                    <div class="process__image">
-                        <img src="assets/img/pp1.jpeg" alt="sourcing coffee beans">                        
-                    </div>
-                    <div class="process__content">
-                        <span class="step-number">A</span>
-                        <h2>Sourcing & Selection</h2>
-                        <p>
-                         We source premium beans from high-altitude farms known for exceptional soil and climate conditions. 
-                         Every batch is selected based on traceability, sustainability and cup quality.                         
-                        </p>
-                    </div> 
-                </div> 
-
-            <!--STEP. 2------>    
-                <div class="process__step reverse">
-                    <div class="process__image">
-                        <img src="assets/img/manu2.jpeg" alt="Harvesting Coffee">
-                    </div>
-                    <div class="process__content">
-                        <span class="step-number">B</span>
-                        <h2>Harvesting</h2>
-                        <p>
-                         Only perfectly ripe cherries are hand-picked to ensure balanced sweetness and optimal sugar development 
-                         for refined flavor profiles.
-                        </p>
-                    </div>
-                </div>
-
-            <!--step3--
-                <div class="process__step">
-                    <div class="process__image">
-                        <img src="assets/img/manu4.WEBP" alt="Quality Control">
-                    </div>
-                    <div class="process__content">
-                        <span class="step-number">C</span>
-                        <h2>Quality Control</h2>
-                        <p>
-                            Each batch undergoes professional cupping sessions to assess aroma,
-                            acidity, body, and aftertaste before approval.
-                        </p>
-                    </div>
-                </div>-->
-                        
-                <!--step 4-->
-                <div class="process__step reverse">
-                    <div class="process__image">
-                         <img src="assets/img/manu6.jpg" alt="Packaging Coffee">
-                    </div>
-                    <div class="process__content">
-                        <span class="step-number">C</span>
-                        <h2>Packaging</h2>
-                        <p>
-                            Freshness is sealed using one-way degassing valves and airtight
-                            packaging to preserve aroma and flavor integrity.
-                        </p>
-                    </div>
-                </div>                 
-
-            </section>
-
-            <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial" id="testimonial">
-                <div class="testimonial__bg section">
-                    <div class="testimonial__container container grid">
-                        <div class="testimonial__data">
-                            <h2 class="section__title">
-                                Coffee is the best drink in the 
-                                morning, it keeps you focused.
-                            </h2>
-
-                            <span class="testimonial__name">
-                                
-                            </span>
-                        </div>
-
-                        <img src="assets/img/newpic3.jpg" alt="testimonial image" class="testimonial__img">
-                    </div>
-                </div>
-            </section>
-        <!--</main>-->
-        <!--pictorial page -->
-        <section class="visual-selection">
-            <div class="visual-block farm">
-                <div class="overlay">
-                    <h2>Born In High Altitude Soil</h2>
-                    <p>Where patience meets Nature.</p>
-                </div>
+            <!-- Mission & Vision cards — edit text inside each card -->
+            <div class="about__mv">
+              <div class="mv__card">
+                <h4>Our Mission</h4>
+                <p>To produce exceptional organic coffee while fostering economic development and social progress in rural communities.</p>
+              </div>
+              <div class="mv__card">
+                <h4>Our Vision</h4>
+                <p>To transform Loro into a renowned coffee hub, ensuring community benefits and regional growth.</p>
+              </div>
             </div>
 
-            <div class="visual-block roasting">
-                <div class="overlay">
-                    <h2>Naturally Sundried</h2>
-                    <p>Precision crafted for perfection.</p>
+            <!-- Pillars — edit icon emoji, title, and description for each -->
+            <div class="about__pillars">
+
+              <div class="pillar">
+                <span class="pillar__icon">🌿</span>
+                <div>
+                  <h4>Environmental Stewardship</h4>
+                  <p>Sustainable farming techniques that protect natural vegetation around our farms.</p>
                 </div>
-            </div>
+              </div>
 
-            <div class="visual-block brewing">
-                <div class="overlay">
-                <h2>The Final Expression</h2>
-                <p>From Farm to Cup.</p>
+              <div class="pillar">
+                <span class="pillar__icon">🤝</span>
+                <div>
+                  <h4>Community Empowerment</h4>
+                  <p>Supporting local farmers with training and resources, promoting ethical farming.</p>
                 </div>
-            </div>
+              </div>
 
-            <div class="visual-block lifestyle">
-                <div class="overlay">
-                    <h2>Refined Everyday Moments</h2>
-                    <p>Loro Coffee - elevated living.</p>
+              <div class="pillar">
+                <span class="pillar__icon">📈</span>
+                <div>
+                  <h4>Economic Development</h4>
+                  <p>Creating jobs, improving infrastructure, and uplifting rural communities.</p>
                 </div>
-            </div>.  
-
-        </section>
-        </main>
-
-        <!--TRADE & EXPORT PAGE -->
-        <section class="trade-hero" id="trade">
-            <div class="trade-overlay">
-                <h1>Trade & Export Partnerships</h1> 
-                 <p class="subtitle">
-                    Building global coffee partnerships with intergrity, reliability and premium quality supply.
-                </p>     
-            </div>          
-        </section>
-       
-        <section class="trade-content">
-            <div class="trade-grid">
-
-                <!--global-->
-                <div class="trade-card">
-                     <h2>Global Distribution</h2>
-                     <p>
-                        Loro Coffee supports international trade through professional export documentation,
-                        efficient logistics coordination and consistent supply chain management.
-                     </p>
-                </div>
-
-                <!--product formats-->
-                <div class="trade-card">
-                    <h2>Product Formats Available</h2>
-                    <ul>
-                    <li>Whole Bean (250g / 500g / 1kg)</li>
-                    <li>Ground Coffee</li>
-                    <li>Private Label Manufacturing</li>
-                    <li>Custom Roasting Profiles</li>
-                    </ul>
-                </div>
-
-                <!--partnership-->
-                <div class="trade-card highlight">
-                    <h2>Why Partner With Loro Coffee?</h2>
-                    <ul>
-                        <li>Premium Ugandan Arabica & Robusta </li>
-                        <li>Stable supply capacity</li>
-                        <li>Export-ready documentation</li>
-                        <li>Flexible bulk pricing</li>
-                    </ul>
-                </div>
+              </div>
 
             </div>
 
-            <!--cta-->
-            <div class="trade-cta">
-                <h2>Ready to Import Premium Ugandan Coffee?</h2>
-                <p>Contact our business development team for pricing, samples and export documentation.</p>
-                <a href="mailto: lorocoffeefarms@gmail.com" class="trade-btn"> Contact Trade Team </a> 
+            <a href="#process" class="btn btn--dark">See How We Do It</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- END ABOUT -->
+
+
+    <!-- ============================================================
+         PRODUCTS SECTION
+         Edit: each product card — image, name, description, tag
+         Add/remove <article class="product__card"> blocks as needed
+         ============================================================ -->
+    <section class="products section" id="products">
+      <div class="container">
+
+        <!-- Section header -->
+        <div class="section__header reveal">
+          <span class="section__label">Our Products</span>
+          <h2 class="section__title">Crafted for every <em>cup</em></h2>
+        </div>
+
+        <!-- Product cards grid -->
+        <div class="products__grid">
+
+          <!-- Product 1 — AVAILABLE -->
+          <article class="product__card reveal">
+            <div class="product__img-wrap">
+              <img src="assets/img/newlorop1.png"
+                   alt="Organic Robusta Coffee"
+                   class="product__img" loading="lazy" />
             </div>
-
-        </section>
-
-
-        <!--==================== FOOTER ====================---->
-
-
-
-
-        <footer class="footer">
-            <div class="footer__container container">
-                <div class="footer__brand">
-                    <a href="#" class="footer__logo">
-                    <img src="assets/img/headpic.png" alt="Loro Coffee logo">
-                    <span>LORO COFFEE</span>
-                    </a>
-                    <p class="footer__tagline">From Farm to Cup — Uganda's finest Robusta, grown with purpose.</p>
-                    <a href="https://wa.me/+256776432810" class="footer__whatsapp" target="_blank">
-                      💬 Chat on WhatsApp
-                    </a>
-                </div>
-
-                <!--STEP 2: Find your footer's navigation or contact section and add:-->
-
-           
-            
-
-                <div class="footer__col">
-                    <h4 class="footer__heading">Contact</h4>
-                    <ul class="footer__contact">
-                    <li>📍 Loro Town Council, Oyam District</li>
-                    <li>✉️ <a href="mailto:lorocoffeefarms@gmail.com">lorocoffeefarms@gmail.com</a></li>
-                    <li>📞 <a href="tel:+256712465060">+256 712 465 060</a></li>
-                    <li>📞 <a href="tel:+256703181093">+256 703 181 093</a></li>
-                    </ul>
-                </div>
-
-                <div class="social-icons">
-                 <a href="https://facebook.com/lorocoffee"><i class="fa-brands fa-facebook"></i></a>
-                  
-                    <a href="https://instagram.com/lorocoffee"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="https://tiktok.com/@lorocoffee"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
+            <div class="product__body">
+              <span class="product__tag product__tag--available">Available Now</span>
+              <h3 class="product__name">Organic Robusta Coffee</h3>
+              <p class="product__desc">
+                Premium locally grown organic Robusta coffee cultivated using sustainable
+                farming techniques — bold, rich, and full of character.
+              </p>
+              <a href="#trade" class="card__link">
+                Enquire about wholesale
+                <i class="ri-arrow-right-line"></i>
+              </a>
             </div>
+          </article>
 
-           
-            <div class="footer__bottom">
-                <p>© 2018–2026 Loro Coffee. All rights reserved.</p>
-                <p>Proudly grown in Uganda 🇺🇬</p>
+          <!-- Product 2 — COMING SOON -->
+          <article class="product__card reveal reveal--delay-1">
+            <div class="product__img-wrap">
+              <img src="assets/img/newloro22.png"
+                   alt="Single-Origin Blends"
+                   class="product__img" loading="lazy" />
             </div>
-        </footer>
+            <div class="product__body">
+              <span class="product__tag product__tag--soon">Coming Soon</span>
+              <h3 class="product__name">Single-Origin Blends</h3>
+              <p class="product__desc">
+                Carefully crafted blends designed to showcase the distinctive flavors
+                of Loro coffee — terroir-driven and fully traceable.
+              </p>
+              <span class="card__link card__link--muted">In development</span>
+            </div>
+          </article>
 
-        <!--========== SCROLL UP ==========-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="ri-arrow-up-line"></i>
+          <!-- Product 3 — COMING SOON -->
+          <article class="product__card reveal reveal--delay-2">
+            <div class="product__img-wrap">
+              <img src="assets/img/newloro33.png"
+                   alt="Artisanal Roasts"
+                   class="product__img" loading="lazy" />
+            </div>
+            <div class="product__body">
+              <span class="product__tag product__tag--soon">Coming Soon</span>
+              <h3 class="product__name">Artisanal Roasts</h3>
+              <p class="product__desc">
+                Specially roasted coffee crafted to bring out rich aroma, smooth
+                texture and bold taste — precision at every degree.
+              </p>
+              <span class="card__link card__link--muted">In development</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- END PRODUCTS -->
+
+
+    <!-- ============================================================
+         GALLERY SECTION
+         Edit: image src, alt text, and caption h3 for each card
+         First card spans 2 columns — it's the "featured" photo
+         ============================================================ -->
+    <section class="gallery section">
+      <div class="container">
+
+        <div class="section__header reveal">
+          <span class="section__label">Inside Loro Coffee</span>
+          <h2 class="section__title">From the farm, <em>with pride</em></h2>
+        </div>
+
+        <div class="gallery__grid">
+
+          <!-- Featured (large) card — spans 2 columns on desktop -->
+          <div class="gallery__card gallery__card--featured reveal">
+            <img src="assets/img/gallery4.jpg" alt="Highland Farms" loading="lazy" />
+            <div class="gallery__caption">Highland Farms</div>
+          </div>
+
+          <div class="gallery__card reveal reveal--delay-1">
+            <img src="assets/img/farm1.jpg" alt="Our Farms" loading="lazy" />
+            <div class="gallery__caption">Our Farms</div>
+          </div>
+
+          <div class="gallery__card reveal reveal--delay-2">
+            <img src="assets/img/gallery3.jpg" alt="Premium Beans" loading="lazy" />
+            <div class="gallery__caption">Premium Beans</div>
+          </div>
+
+          <div class="gallery__card reveal">
+            <img src="assets/img/gallery2.jpg" alt="Hand Picking" loading="lazy" />
+            <div class="gallery__caption">Hand Picking</div>
+          </div>
+
+          <div class="gallery__card reveal reveal--delay-1">
+            <img src="assets/img/gallery1.jpg" alt="Natural Drying" loading="lazy" />
+            <div class="gallery__caption">Natural Drying</div>
+          </div>
+
+          <div class="gallery__card reveal reveal--delay-2">
+            <img src="assets/img/coffeeharvest.JPG" alt="Harvest Season" loading="lazy" />
+            <div class="gallery__caption">Harvest Season</div>
+          </div>
+
+          <div class="gallery__card reveal">
+            <img src="assets/img/manu4.WEBP" alt="Processing" loading="lazy" />
+            <div class="gallery__caption">Processing</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- END GALLERY -->
+
+
+    <!-- ============================================================
+         PROCESS SECTION
+         Part 1: 3-step overview circles (01 / 02 / 03)
+         Part 2: Detailed A / B / C alternating layout
+         Edit: step numbers, titles, descriptions, images
+         ============================================================ -->
+    <section class="process section" id="process">
+      <div class="container">
+
+        <!-- Section header -->
+        <div class="process__header reveal">
+          <span class="section__label">Our Manufacturing Process</span>
+          <h2 class="section__title">
+            From carefully selected farms<br />to your <em>cup</em>
+          </h2>
+          <p class="section__body">Precision at every stage.</p>
+        </div>
+
+        <!-- Step overview: 01 / 02 / 03 circles -->
+        <div class="process__overview">
+
+          <div class="process__step-circle reveal">
+            <div class="step__num">01</div>
+            <img src="assets/img/steps-green-coffee.png"
+                 alt="Harvesting" class="step__icon" loading="lazy" />
+            <h3>Harvesting</h3>
+            <p>Harvest occurs annually when the coffee beans reach maturity and are collected for processing.</p>
+          </div>
+
+          <div class="process__step-circle reveal reveal--delay-1">
+            <div class="step__num">02</div>
+            <img src="assets/img/steps-coffee-beans.png"
+                 alt="Drying" class="step__icon" loading="lazy" />
+            <h3>Drying</h3>
+            <p>The beans are dried using wet or dry technique, depending on the flavor profile we want to achieve.</p>
+          </div>
+
+          <div class="process__step-circle reveal reveal--delay-2">
+            <div class="step__num">03</div>
+            <img src="assets/img/steps-ground-coffee.png"
+                 alt="Roasting" class="step__icon" loading="lazy" />
+            <h3>Roasting</h3>
+            <p>The coffee is roasted and acquires its flavor by precision processing the grain in dedicated ovens.</p>
+          </div>
+
+        </div>
+
+        <!-- Detailed steps A / B / C -->
+
+        <!-- Step A: image LEFT, text RIGHT -->
+        <div class="process__detail reveal">
+          <div class="process__detail-img">
+            <img src="assets/img/pp1.jpeg" alt="Sourcing and Selection" loading="lazy" />
+          </div>
+          <div class="process__detail-text">
+            <span class="step__letter">A</span>
+            <h3>Sourcing &amp; Selection</h3>
+            <p>
+              We source premium beans from our high-altitude farms known for exceptional soil
+              and climate conditions. Every batch is selected based on traceability,
+              sustainability and cup quality — no shortcuts, ever.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step B: image RIGHT, text LEFT (reversed) -->
+        <div class="process__detail process__detail--reverse reveal">
+          <div class="process__detail-img">
+            <img src="assets/img/manu2.jpeg" alt="Harvesting coffee" loading="lazy" />
+          </div>
+          <div class="process__detail-text">
+            <span class="step__letter">B</span>
+            <h3>Harvesting</h3>
+            <p>
+              Only perfectly ripe cherries are hand-picked to ensure balanced sweetness and
+              optimal sugar development for refined flavor profiles. Our farmers bring decades
+              of knowledge to every harvest season.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step C: image LEFT, text RIGHT -->
+        <div class="process__detail reveal">
+          <div class="process__detail-img">
+            <img src="assets/img/manu6.jpg" alt="Packaging coffee" loading="lazy" />
+          </div>
+          <div class="process__detail-text">
+            <span class="step__letter">C</span>
+            <h3>Packaging</h3>
+            <p>
+              Freshness is sealed using one-way degassing valves and airtight packaging
+              to preserve aroma and flavor integrity — from our farm gates to your roastery,
+              every bean arrives at its best.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- END PROCESS -->
+
+
+    <!-- ============================================================
+         IMPACT / COMMUNITY BAND
+         Edit: title, body text, and each impact__num strong + span
+         ============================================================ -->
+    <section class="impact">
+      <div class="container">
+        <div class="impact__inner">
+
+          <!-- Left: text -->
+          <div class="impact__text reveal">
+            <span class="section__label">Why It Matters</span>
+            <h2 class="section__title">Coffee that builds<br /><em>communities</em></h2>
+            <p class="section__body">
+              Every bag of Loro Coffee supports sustainable livelihoods in Oyam District,
+              Uganda. We invest in infrastructure, training, and environmental protection
+              that outlasts every harvest — creating futures that last generations.
+            </p>
+            <a href="#trade" class="btn btn--cream">Partner With Us</a>
+          </div>
+
+          <!-- Right: impact numbers grid — edit each strong + span -->
+          <div class="impact__nums reveal reveal--delay">
+            <div class="impact__num">
+              <strong>Oyam</strong>
+              <span>District, Northern Uganda</span>
+            </div>
+            <div class="impact__num">
+              <strong>100%</strong>
+              <span>Sustainably grown &amp; harvested</span>
+            </div>
+            <div class="impact__num">
+              <strong>Jobs</strong>
+              <span>Created for rural communities</span>
+            </div>
+            <div class="impact__num">
+              <strong>Zero</strong>
+              <span>Synthetic pesticides used</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- END IMPACT -->
+
+
+    <!-- ============================================================
+         TESTIMONIAL / PICTORIAL SECTION
+         Edit: blockquote text, attribution name and role
+         Image: assets/img/newpic3.jpg
+         ============================================================ -->
+    <section class="testimonial section" id="testimonial">
+      <div class="container">
+        <div class="testimonial__inner">
+
+          <!-- Left: photo -->
+          <img src="assets/img/newpic3.jpg"
+               alt="Loro Coffee Story"
+               class="testimonial__img reveal" loading="lazy" />
+
+          <!-- Right: quote -->
+          <div class="testimonial__text reveal reveal--delay">
+            <span class="quote__mark">"</span>
+            <blockquote>
+              Coffee is the best drink in the morning — it keeps you focused.
+              Grown in high-altitude soil where patience meets nature,
+              naturally sundried with precision crafted for perfection.
+            </blockquote>
+            <div class="testimonial__attr">
+              <span class="attr__line"></span>
+              <div>
+                <span class="attr__name">Born in High Altitude Soil</span>
+                <span class="attr__role">Loro Village, Aber Sub County, Uganda</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- END TESTIMONIAL -->
+
+
+    <!-- ============================================================
+         VISUAL SELECTION BAND (4 full-bleed photo panels)
+         Background images set in CSS → .visual--farm / .visual--roasting etc.
+         Edit: h2 and p text inside each .visual__overlay
+         ============================================================ -->
+    <section class="visual-band">
+
+      <div class="visual__panel visual--farm">
+        <div class="visual__overlay">
+          <h2>Born In High Altitude Soil</h2>
+          <p>Where patience meets Nature.</p>
+        </div>
+      </div>
+
+      <div class="visual__panel visual--roasting">
+        <div class="visual__overlay">
+          <h2>Naturally Sundried</h2>
+          <p>Precision crafted for perfection.</p>
+        </div>
+      </div>
+
+      <div class="visual__panel visual--brewing">
+        <div class="visual__overlay">
+          <h2>The Final Expression</h2>
+          <p>From Farm to Cup.</p>
+        </div>
+      </div>
+
+      <div class="visual__panel visual--lifestyle">
+        <div class="visual__overlay">
+          <h2>Refined Everyday Moments</h2>
+          <p>Loro Coffee — elevated living.</p>
+        </div>
+      </div>
+
+    </section>
+    <!-- END VISUAL BAND -->
+
+  </main>
+
+
+  <!-- ============================================================
+       TRADE & EXPORT SECTION
+       Edit: h1, subtitle, card content, CTA button href
+       ============================================================ -->
+  <section class="trade" id="trade">
+
+    <!-- Hero banner -->
+    <div class="trade__hero">
+      <div class="trade__hero-overlay container">
+        <span class="section__label">Trade &amp; Export Partnerships</span>
+        <h1 class="trade__title">Building global partnerships<br /><em>with integrity</em></h1>
+        <p class="trade__subtitle">
+          Professional export documentation, efficient logistics coordination
+          and consistent supply chain management.
+        </p>
+      </div>
+    </div>
+
+    <!-- Cards + CTA -->
+    <div class="trade__content container">
+
+      <div class="trade__cards">
+
+        <!-- Card 1 -->
+        <div class="trade__card reveal">
+          <h2>Global Distribution</h2>
+          <p>
+            Loro Coffee supports international trade through professional export
+            documentation, efficient logistics coordination and consistent
+            supply chain management.
+          </p>
+        </div>
+
+        <!-- Card 2: product formats — add/remove <li> items as needed -->
+        <div class="trade__card reveal reveal--delay-1">
+          <h2>Product Formats Available</h2>
+          <ul class="trade__list">
+            <li>Whole Bean (250g / 500g / 1kg)</li>
+            <li>Ground Coffee</li>
+            <li>Private Label Manufacturing</li>
+            <li>Custom Roasting Profiles</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: partnership reasons — add/remove <li> items as needed -->
+        <div class="trade__card trade__card--highlight reveal reveal--delay-2">
+          <h2>Why Partner With Loro Coffee?</h2>
+          <ul class="trade__list">
+            <li>Premium Ugandan Robusta — single origin, fully traceable</li>
+            <li>Stable supply capacity from established farms</li>
+            <li>Export-ready documentation &amp; logistics support</li>
+            <li>Flexible bulk pricing for importers &amp; roasters</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- CTA box -->
+      <div class="trade__cta reveal" id="contact">
+        <h2>Ready to Import Premium Ugandan Coffee?</h2>
+        <p>Contact our business development team for pricing, samples and export documentation.</p>
+        <a href="mailto:lorocoffeefarms@gmail.com" class="btn btn--caramel">Contact Trade Team</a>
+
+        <!-- Contact details inside the CTA box -->
+        <div class="trade__contacts">
+          <a href="https://wa.me/+256776432810" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line"></i> Chat on WhatsApp
+          </a>
+          <a href="mailto:lorocoffeefarms@gmail.com">
+            <i class="ri-mail-line"></i> lorocoffeefarms@gmail.com
+          </a>
+          <a href="tel:+256712465060">
+            <i class="ri-phone-line"></i> +256 712 465 060
+          </a>
+          <a href="tel:+256703181093">
+            <i class="ri-phone-line"></i> +256 703 181 093
+          </a>
+          <span>
+            <i class="ri-map-pin-line"></i> Loro Town Council, Oyam District, Uganda
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- END TRADE -->
+
+
+  <!-- ============================================================
+       FOOTER
+       Edit: tagline, nav links, contact details, social links
+       ============================================================ -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner container">
+
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="#home" class="footer__logo">
+          <img src="assets/img/headpic.png" alt="Loro Coffee logo"
+               onerror="this.style.display='none'" />
+          <span>LORO <em>Coffee</em></span>
         </a>
+        <p class="footer__tagline">
+          From Farm to Cup — Uganda's finest Robusta, grown with purpose
+          in the highlands of Loro Town Council, Oyam District.
+        </p>
 
-        <!--=============== SCROLLREVEAL ===============-->
-        <script src="assets/js/scrollreveal.min.js"></script>
+        <!-- Social icons — edit href for each platform -->
+        <div class="footer__socials">
+          <a href="https://facebook.com/lorocoffee"  aria-label="Facebook"  target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://instagram.com/lorocoffee" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://tiktok.com/@lorocoffee"   aria-label="TikTok"    target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://x.com/lorocoffee"         aria-label="X/Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
 
-        <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
-    </body>
-</html> 
+        <a href="https://wa.me/+256776432810"
+           class="footer__whatsapp" target="_blank" rel="noopener">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+
+      <!-- Navigate column -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Navigate</h4>
+        <ul class="footer__links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#trade">Trade &amp; Export</a></li>
+        </ul>
+      </div>
+
+      <!-- Products column -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Products</h4>
+        <ul class="footer__links">
+          <li><a href="#products">Organic Robusta Coffee</a></li>
+          <li><a href="#products">Single-Origin Blends</a></li>
+          <li><a href="#products">Artisanal Roasts</a></li>
+          <li><a href="#trade">Wholesale Enquiries</a></li>
+          <li><a href="#trade">Private Label</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact column — edit addresses, phone, email -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Contact Us</h4>
+        <ul class="footer__contact">
+          <li>
+            <i class="ri-map-pin-line"></i>
+            Loro Town Council, Oyam District, Uganda
+          </li>
+          <li>
+            <i class="ri-mail-line"></i>
+            <a href="mailto:lorocoffeefarms@gmail.com">lorocoffeefarms@gmail.com</a>
+          </li>
+          <li>
+            <i class="ri-phone-line"></i>
+            <a href="tel:+256712465060">+256 712 465 060</a>
+          </li>
+          <li>
+            <i class="ri-phone-line"></i>
+            <a href="tel:+256703181093">+256 703 181 093</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom container">
+      <p>© 2018–2026 Loro Coffee. All rights reserved.</p>
+      <p>Proudly grown in Uganda 🇺🇬</p>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+
+  <!-- ============================================================
+       SCROLL-TO-TOP BUTTON
+       Appears automatically after user scrolls down — see main.js
+       ============================================================ -->
+  <a href="#home" class="scroll-up" id="scroll-up" aria-label="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+
+
+  <!-- ============================================================
+       SCRIPTS
+       Load order: ScrollReveal library → main.js
+       ============================================================ -->
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
