@@ -265,7 +265,7 @@ ul { list-style: none; }
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 11px;
   font-family: var(--font-display);
   font-size: 1.45rem;
   font-weight: 700;
@@ -1206,8 +1206,8 @@ ul { list-style: none; }
 /* --- Set the background image for each panel here --- */
 .visual--farm     { background-image: url('../img/gallery4.jpg'); }
 .visual--roasting { background-image: url('../img/gallery1.jpg'); }
-.visual--brewing  { background-image: url('../img/gallery3.jpg'); }
-.visual--lifestyle{ background-image: url('../img/manu4.WEBP'); }
+.visual--brewing  { background-image: url('../img/photo22.jpg'); }
+.visual--lifestyle{ background-image: url('../img/roasting.JPG'); }
 
 
 /* ================================================================
