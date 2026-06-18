@@ -355,6 +355,49 @@
     </section>
     <!-- END ABOUT -->
 
+    <!-- ============================================================
+         PROGRESS WIDGET
+         Edit: currentSection text inside #currentSection
+         ============================================================ -->
+
+    <div class="progress-widget">
+
+    <div class="progress-circle">
+
+        <svg>
+            <circle cx="35" cy="35" r="30"></circle>
+
+            <circle
+                cx="35"
+                cy="35"
+                r="30"
+                id="progressRing">
+            </circle>
+        </svg>
+
+        <img
+            src="assets/img/headpic.png"
+            alt="Loro Coffee">
+    </div>
+
+    <div
+        class="widget-popup"
+        id="widgetPopup">
+
+        <img
+            src="assets/img/headpic.png"
+            alt="Loro Coffee"
+            class="widget-logo">
+
+        <h4>Loro Coffee</h4>
+
+        <p id="currentSection">
+            Welcome
+        </p>
+
+    </div>
+
+</div>
 
     <!-- ============================================================
          PRODUCTS SECTION
@@ -655,76 +698,55 @@
          TESTIMONIAL / PICTORIAL SECTION
          Edit: blockquote text, attribution name and role
          Image: assets/img/newpic3.jpg
-         ============================================================ -->
-    <section class="testimonial section" id="testimonial">
-      <div class="container">
-        <div class="testimonial__inner">
+         ============================================================ --> <!--
+    <section class="testimonial section" id="testimonial" data-title="Stories">
+  <div class="container">
+    
+    <p class="tag">STORIES FROM OUR PARTNERS</p>
+    <h2>Our Success Stories</h2>
 
-          <!-- Left: photo -->
-          <img src="assets/img/refined.jpg"
-               alt="Loro Coffee Story"
-               class="testimonial__img reveal" loading="lazy" />
+    <div class="testimonial-wrapper">
+      <div class="testimonial-track">
 
-          <!-- Right: quote -->
-          <div class="testimonial__text reveal reveal--delay">
-            <span class="quote__mark">"</span>
-            <blockquote>
-              Coffee is the best drink in the morning — it keeps you focused.
-              Grown in high-altitude soil where patience meets nature,
-              naturally sundried with precision crafted for perfection.
-            </blockquote>
-            <div class="testimonial__attr">
-              <span class="attr__line"></span>
-              <div>
-                <span class="attr__name">Born in High Altitude Soil</span>
-                <span class="attr__role">Loro Village, Aber Sub County, Uganda</span>
-              </div>
-            </div>
+        <div class="testimonial-card">
+          <img src="assets/img/t1.jpeg" alt="International Coffee Roaster Partner">
+          <div class="overlay">
+            <h3>Luzinda Abdul</h3>
+            <span class="partner-role">Global Beans Imports</span>
+            <p>Premium single-origin Robusta with exceptional cupping depth and reliable export logistics.</p>
+          
           </div>
-
         </div>
-      </div>
-    </section>
-    <!-- END TESTIMONIAL -->
 
-
-    <!-- ============================================================
-         VISUAL SELECTION BAND (4 full-bleed photo panels)
-         Background images set in CSS → .visual--farm / .visual--roasting etc.
-         Edit: h2 and p text inside each .visual__overlay
-         ============================================================ -->
-    <section class="visual-band">
-
-      <div class="visual__panel visual--farm">
-        <div class="visual__overlay">
-          <h2>Born In High Altitude Soil</h2>
-          <p>Where patience meets Nature.</p>
+        <div class="testimonial-card">
+          <img src="assets/img/t2.jpeg" alt="Coffee Farmer Partnership">
+          <div class="overlay">
+            <h3>Naheed N.</h3>
+            <span class="partner-role">Oyam District Farm Network</span>
+            <p>Guaranteed premium pricing and organic training that brought stability to our community.</p>
+            
+          </div>
         </div>
-      </div>
 
-      <div class="visual__panel visual--roasting">
-        <div class="visual__overlay">
-          <h2>Naturally Sundried</h2>
-          <p>Precision crafted for perfection.</p>
+        <div class="testimonial-card">
+          <img src="assets/img/t3.jpeg" alt="Distribution Partner">
+          <div class="overlay">
+            <h3>Dalvin M.</h3>
+            <span class="partner-role">Heritage Brew Brands</span>
+            <p>Unmatched custom roasting profiles and moisture-controlled bulk packaging.</p>
+          
+          </div>
         </div>
-      </div>
 
-      <div class="visual__panel visual--brewing">
-        <div class="visual__overlay">
-          <h2>The Final Expression</h2>
-          <p>From Farm to Cup.</p>
-        </div>
       </div>
+    </div>
+    <div class="testimonial-dots"></div>
+  </div>
+</section>
+    <!-- END TESTIMONIAL ----> 
 
-      <div class="visual__panel visual--lifestyle">
-        <div class="visual__overlay">
-          <h2>Refined Everyday Moments</h2>
-          <p>Loro Coffee — elevated living.</p>
-        </div>
-      </div>
 
-    </section>
-    <!-- END VISUAL BAND -->
+    
 
   </main>
 
@@ -810,9 +832,23 @@
             <i class="ri-map-pin-line"></i> Loro Town Council, Oyam District, Uganda
           </span>
         </div>
+       <div class="exports-buttons">
+        <button id="readED" class="cv-btn">
+        <i class="ri-file-text-line"> Read Export Documentation</i> 
+        </button>
+       </div>
       </div>
 
+<div class="exports-modal" id="exportsModal">
+    <div class="exports-content">
+        <span class="close-btn" id="closeExports">&times;</span>
+        <img src="assets/img/export.jpeg" alt="Loro Coffee Export Documentation">
     </div>
+</div>
+      
+
+    
+    
   </section>
   <!-- END TRADE -->
 

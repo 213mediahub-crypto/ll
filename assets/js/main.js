@@ -35,91 +35,122 @@
   onScroll(); // run once on load in case page is already scrolled
 })();
 
-
 /* ================================================================
-   02. NAV CTA BUTTON
-   The "Partner With Us" button is hidden by default (CSS: display:none)
-   and revealed after the user scrolls 400px into the page.
-   To change the scroll threshold, edit the number 400 below.
+   03A. PROGRESS WIDGET
+   - Updates ring progress
+   - Detects current section
+   - Toggles section popup
 ================================================================ */
-(function initNavCta() {
-  const navCta = document.getElementById('nav-cta');
-  if (!navCta) return;
 
-  const THRESHOLD = 400; // px from top before CTA appears
+(function initProgressWidget() {
 
-  function toggleCta() {
-    navCta.style.display = window.scrollY > THRESHOLD ? 'inline-block' : 'none';
-  }
+  const progressRing = document.getElementById('progressRing');
+  const currentSection = document.getElementById('currentSection');
+  const widgetPopup = document.getElementById('widgetPopup');
+  const progressCircle = document.querySelector('.progress-circle');
 
-  window.addEventListener('scroll', toggleCta, { passive: true });
-  toggleCta();
-})();
+  if (
+    !progressRing ||
+    !currentSection ||
+    !widgetPopup ||
+    !progressCircle
+  ) return;
 
+  const radius = 30;
+  const circumference = 2 * Math.PI * radius;
 
-/* ================================================================
-   03. MOBILE DRAWER
-   Opens and closes the slide-in nav drawer on mobile.
-   Clicking the hamburger, close button, overlay, or any drawer
-   link will toggle the drawer.
-================================================================ */
-(function initMobileDrawer() {
-  const toggle  = document.getElementById('nav-toggle');
-  const drawer  = document.getElementById('nav-drawer');
-  const overlay = document.getElementById('nav-overlay');
-  const closeBtn= document.getElementById('nav-close');
+  progressRing.style.strokeDasharray = circumference;
+  progressRing.style.strokeDashoffset = circumference;
 
-  if (!toggle || !drawer) return;
+  function updateProgressWidget() {
 
-  function openDrawer() {
-    drawer.classList.add('open');
-    overlay.classList.add('show');
-    document.body.style.overflow = 'hidden'; // prevent background scroll
-  }
+    /* ==========================================
+       PAGE SCROLL PROGRESS
+    ========================================== */
 
-  function closeDrawer() {
-    drawer.classList.remove('open');
-    overlay.classList.remove('show');
-    document.body.style.overflow = '';
-  }
+    const scrollTop = window.scrollY;
 
-  toggle.addEventListener('click', openDrawer);
+    const docHeight =
+      document.documentElement.scrollHeight -
+      window.innerHeight;
 
-  if (closeBtn)  closeBtn.addEventListener('click',  closeDrawer);
-  if (overlay)   overlay.addEventListener('click',   closeDrawer);
+    const percent =
+      docHeight > 0
+        ? (scrollTop / docHeight) * 100
+        : 0;
 
-  // Close drawer when any drawer link is clicked
-  document.querySelectorAll('.nav__drawer-link').forEach(function(link) {
-    link.addEventListener('click', closeDrawer);
-  });
-})();
+    const offset =
+      circumference -
+      (percent / 100) * circumference;
 
+    progressRing.style.strokeDashoffset = offset;
 
-/* ================================================================
-   04. SMOOTH SCROLL
-   Intercepts all <a href="#..."> clicks and scrolls smoothly to
-   the target section, offset by the nav height so the section
-   heading isn't hidden behind the fixed nav bar.
+    /* ==========================================
+       CURRENT SECTION DETECTION
+    ========================================== */
 
-   To change the offset, edit NAV_OFFSET below (default: 76px).
-================================================================ */
-(function initSmoothScroll() {
-  var NAV_OFFSET = 76; // should match --nav-height in CSS
+    const sections =
+      document.querySelectorAll('section[id]');
 
-  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-    anchor.addEventListener('click', function(e) {
-      var targetId = this.getAttribute('href');
-      if (targetId === '#') return; // skip bare # links
+    sections.forEach(section => {
 
-      var target = document.querySelector(targetId);
-      if (!target) return;
+      const top =
+        section.offsetTop - 180;
 
-      e.preventDefault();
+      const bottom =
+        top + section.offsetHeight;
 
-      var top = target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
-      window.scrollTo({ top: top, behavior: 'smooth' });
+      if (
+        scrollTop >= top &&
+        scrollTop < bottom
+      ) {
+
+        currentSection.textContent =
+          section.dataset.title ||
+          section.querySelector('.section__title')?.textContent ||
+          section.id;
+
+      }
+
     });
+
+  }
+
+  window.addEventListener(
+    'scroll',
+    updateProgressWidget,
+    { passive: true }
+  );
+
+  updateProgressWidget();
+
+  /* ==========================================
+     POPUP TOGGLE
+  ========================================== */
+
+  progressCircle.addEventListener('click', () => {
+
+    widgetPopup.classList.toggle('show');
+
   });
+
+  /* ==========================================
+     CLOSE POPUP WHEN CLICKING OUTSIDE
+  ========================================== */
+
+  document.addEventListener('click', (e) => {
+
+    if (
+      !progressCircle.contains(e.target) &&
+      !widgetPopup.contains(e.target)
+    ) {
+
+      widgetPopup.classList.remove('show');
+
+    }
+
+  });
+
 })();
 
 
@@ -222,4 +253,187 @@
 
   window.addEventListener('scroll', toggleScrollUp, { passive: true });
   toggleScrollUp();
+})();
+
+// ================= TESTIMONIAL SLIDER =================
+
+let sliderInterval;
+let startX = 0;
+let currentIndex = 0;
+let isDragging = false;
+let isMobile = window.innerWidth <= 600;
+
+const track = document.querySelector(".testimonial-track");
+const cards = document.querySelectorAll(".testimonial-card");
+const dotsContainer = document.querySelector(".testimonial-dots");
+
+if (!track || !cards.length) {
+  console.warn("Slider elements not found. Slider functionality will be disabled.");
+}else {
+
+let dots = [];
+
+// ================= INIT =================
+function initSlider(){
+
+  if(!isMobile) return;
+
+  dotsContainer.innerHTML = "";
+  currentIndex = 0;
+
+  cards.forEach((_, i) => {
+    const dot = document.createElement("span");
+    if(i === 0) dot.classList.add("active");
+
+    dot.addEventListener("click", () => {
+      currentIndex = i;
+      updateSlider();
+    });
+
+    dotsContainer.appendChild(dot);
+  });
+
+  dots = document.querySelectorAll(".testimonial-dots span");
+
+  updateSlider();
+  startAutoSlide();
+}
+
+// ================= UPDATE =================
+function updateSlider() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  dots.forEach(dot => dot.classList.remove("active"));
+  if(dots[currentIndex]) dots[currentIndex].classList.add("active");
+}
+
+// ================= AUTO =================
+function startAutoSlide() {
+  clearInterval(sliderInterval);
+
+  if (!isMobile) return;
+
+  sliderInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % cards.length;
+    updateSlider();
+  }, 4000);
+}
+
+function stopAutoSlide() {
+  clearInterval(sliderInterval);
+}
+
+// ================= TOUCH =================
+track.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+  isDragging = true;
+  stopAutoSlide();
+}, { passive: true });
+
+track.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+
+  let moveX = e.touches[0].clientX;
+  let diff = moveX - startX;
+
+  track.style.transform = `translateX(calc(-${currentIndex * 100}% + ${diff}px))`;
+}, { passive: true });
+
+track.addEventListener("touchend", (e) => {
+  handleSwipe(e.changedTouches[0].clientX);
+});
+
+// ================= MOUSE =================
+track.addEventListener("mousedown", (e) => {
+  startX = e.clientX;
+  isDragging = true;
+  stopAutoSlide();
+});
+
+track.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  let diff = e.clientX - startX;
+  track.style.transform = `translateX(calc(-${currentIndex * 100}% + ${diff}px))`;
+});
+
+track.addEventListener("mouseup", (e) => {
+  if (!isDragging) return;
+  handleSwipe(e.clientX);
+});
+
+track.addEventListener("mouseleave", () => {
+  if (isDragging) {
+    isDragging = false;
+    updateSlider();
+  }
+});
+
+// ================= SWIPE =================
+function handleSwipe(endX){
+  let diff = endX - startX;
+
+  if (diff > 50 && currentIndex > 0) {
+    currentIndex--;
+  } else if (diff < -50 && currentIndex < cards.length - 1) {
+    currentIndex++;
+  }
+
+  updateSlider();
+  isDragging = false;
+  startAutoSlide();
+}
+
+// ================= RESIZE =================
+window.addEventListener("resize", () => {
+  let newMobile = window.innerWidth <= 600;
+
+  if(newMobile !== isMobile){
+    isMobile = newMobile;
+
+    if(isMobile){
+      initSlider();
+    } else {
+      track.style.transform = "translateX(0)";
+      clearInterval(sliderInterval);
+      dotsContainer.innerHTML = "";
+    }
+  }
+});
+
+// INIT ON LOAD
+if(isMobile){
+  initSlider();
+}
+}
+/* ================================================================
+   07B. EXPORT DOCUMENTATION MODAL HANDLER
+================================================================ */
+(function initExportModal() {
+  const readBtn = document.getElementById('readED');
+  const modal = document.getElementById('exportsModal');
+  const closeBtn = document.getElementById('closeExports');
+
+  if (!readBtn || !modal || !closeBtn) return;
+
+  // Open Document Modal
+  readBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden'; // Stop background scrolling while reading
+  });
+
+  // Close via X button
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+    document.body.style.overflow = ''; // Restore background scrolling
+  });
+
+  // Close instantly when clicking anywhere outside the image card
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+  });
 })();
